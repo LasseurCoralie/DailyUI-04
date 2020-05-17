@@ -1,14 +1,11 @@
 import React from 'react';
 import './ButtonStyled.css';
 
-const isOperator = (val) => {
-  return !isNaN(val) || val === "." || val === "=";
-}
 
-const Button = ({handleClick, children}) => {
+const Button = ({handleClick, children, typeClass}) => {
   return (
     <div 
-      className={`button-wrapper ${isOperator(children) ? null : "operator"}`}
+      className={`button-wrapper ${typeClass}`}
       onClick={() => handleClick(children)}
     >
       {children}
