@@ -33,40 +33,38 @@ class App extends Component {
           </div>
           <div className="calc-wrapper">
             <Input input={this.state.input} />
-            <div className="row">
-            <ClearButton handleClear={() => this.setState({input: ''})}>AC</ClearButton>
-              <Button handleClick={this.addToInput}>/</Button>
+            <div className="btn-zn">
+              <div className="btn">
+                <div className="row">
+                  <ClearButton handleClear={() => this.setState({input: ''})}>AC</ClearButton>
+                  <Button handleClick={this.addToInput}>/</Button>
+                </div>
+                <div className="row">
+                  <Button handleClick={this.addToInput}>7</Button>
+                  <Button handleClick={this.addToInput}>8</Button>
+                  <Button handleClick={this.addToInput}>9</Button>
+                  <Button handleClick={this.addToInput}>*</Button>
+                </div>
+                <div className="row">
+                  <Button handleClick={this.addToInput}>4</Button>
+                  <Button handleClick={this.addToInput}>5</Button>
+                  <Button handleClick={this.addToInput}>6</Button>
+                  <Button handleClick={this.addToInput}>-</Button>
+                </div>
+                <div className="row">
+                  <Button handleClick={this.addToInput}>1</Button>
+                  <Button handleClick={this.addToInput}>2</Button>
+                  <Button handleClick={this.addToInput}>3</Button>
+                  <Button handleClick={this.addToInput}>+</Button>
+                </div>
+                <div className="row">
+                  <Button handleClick={this.addToInput} typeClass="zero-btn">0</Button>
+                  <Button handleClick={this.addToInput}>.</Button>
+                  <Button handleClick={() => this.handleEqual()} typeClass="equal-btn">=</Button>
+                </div>
+              </div>
+              <div className="background-zn"></div>
             </div>
-            <div className="button-zn">
-              <div className="row">
-                <Button handleClick={this.addToInput}>7</Button>
-                <Button handleClick={this.addToInput}>8</Button>
-                <Button handleClick={this.addToInput}>9</Button>
-                <Button handleClick={this.addToInput}>/</Button>
-              </div>
-              <div className="row">
-                <Button handleClick={this.addToInput}>4</Button>
-                <Button handleClick={this.addToInput}>5</Button>
-                <Button handleClick={this.addToInput}>6</Button>
-                <Button handleClick={this.addToInput}>*</Button>
-              </div>
-              <div className="row">
-                <Button handleClick={this.addToInput}>1</Button>
-                <Button handleClick={this.addToInput}>2</Button>
-                <Button handleClick={this.addToInput}>3</Button>
-                <Button handleClick={this.addToInput}>+</Button>
-              </div>
-              <div className="row">
-                <Button handleClick={this.addToInput}>0</Button>
-                <Button handleClick={this.addToInput}>.</Button>
-                <Button handleClick={() => this.handleEqual()}>=</Button>
-                <Button handleClick={this.addToInput}>-</Button>
-              </div>
-              <div className="row">
-                
-              </div>
-            </div>
-
         </div>
         </div>
       </div>

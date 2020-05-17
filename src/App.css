@@ -9,6 +9,7 @@
 }
 
 .wrapper {
+  position: relative;
   width: 400px;
   height: auto;
   border-radius: 5px;
@@ -35,8 +36,24 @@ h1.title {
   border-radius: 0 0 28px 28px;
 }
 
-.calc-wrapper {
+.btn-zn{
+  display: flex;
+}
 
+.btn {
+  z-index: 2;
+  width: 100%;
+}
+
+.background-zn {
+  border-top-right-radius: 200px;
+  background-color: blue;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 72%;
+  width: 100%;
+  z-index: 1;
 }
 
 .row{
