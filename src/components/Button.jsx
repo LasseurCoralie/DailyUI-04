@@ -5,13 +5,13 @@ const isOperator = (val) => {
   return !isNaN(val) || val === "." || val === "=";
 }
 
-const Button = (props) => {
+const Button = ({handleClick, children}) => {
   return (
     <div 
-      className={`button-wrapper ${isOperator(props.children) ? null : "operator"}`}
-      onClick={() => props.handleClick(props.children)}
+      className={`button-wrapper ${isOperator(children) ? null : "operator"}`}
+      onClick={() => handleClick(children)}
     >
-      {props.children}
+      {children}
     </div>
   );
 }
